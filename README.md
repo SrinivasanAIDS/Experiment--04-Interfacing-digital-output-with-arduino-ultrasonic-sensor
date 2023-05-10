@@ -1,4 +1,4 @@
-# EXPERIMENT-NO--05-Distance measurement using Ultrasonic sensor
+# EXPERIMENT-NO--04-Distance measurement using Ultrasonic sensor
 
 ## AIM: 
 To interface an FSR(force sensitive resistor) and scale the output voltage obtained to pressure applied 
@@ -56,8 +56,8 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 ### PROGRAM 
 ```python
-int trigPin = 2;
-int echoPin = 3;
+int trigPin = 10;
+int echoPin = 9;
 long time;
 int distance;
 void setup()
@@ -68,20 +68,20 @@ void setup()
 }
 void loop()
 {
-  digitalWrite(2,LOW);
-  delay(2);
-  digitalWrite(2,HIGH);
-  delay(10);
-  digitalWrite(2,LOW);
-  time = pulseIn(3,HIGH);
-  distance = (time*0.034/2);
-  Serial.print("Distance = ");
-  Serial.println(distance);
-  delay(100);
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.print(" cm");
 
 }
 ```
 ### Distance vs measurement table 
-![Screenshot 2022-05-11 093707](https://user-images.githubusercontent.com/103049243/167767204-d29639cf-01cd-4681-bcbc-25c7532b391e.png)
+
 ### RESULTS
 Thus, we have interfaced an FSR(force sensitive resistor) and scale the output voltage obtained to pressure applied is verified.
