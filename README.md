@@ -81,7 +81,8 @@ void loop()
 
 }
 ```
-### Distance vs measurement table 
+### Output
+![image](https://github.com/SrinivasanAIDS/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/103049243/433c4fc3-8754-4c70-a548-59231a7940ab)
 
 ### RESULTS
 Thus, we have interfaced an FSR(force sensitive resistor) and scale the output voltage obtained to pressure applied is verified.
